@@ -58,7 +58,7 @@ export function PremiumTestimonial({
           </div>
           
           <blockquote className="text-2xl md:text-3xl leading-tight font-semibold">
-            "{renderQuote()}"
+            &ldquo;{renderQuote()}&rdquo;
           </blockquote>
 
           <div className="space-y-1 pt-4">

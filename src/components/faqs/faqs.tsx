@@ -61,7 +61,7 @@ export function FAQs() {
           <AccordionTriggerFAQs>Do I need a long-term contract?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
             <p>
-              No. We offer a risk-free trial with no contract. You can cancel anytime if you're not satisfied with our service.
+              No. We offer a risk-free trial with no contract. You can cancel anytime if you&apos;re not satisfied with our service.
             </p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>

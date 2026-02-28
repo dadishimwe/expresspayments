@@ -7,6 +7,10 @@ const navItems = [
     href: "/#features",
   },
   {
+    label: "Savings",
+    href: "/savings",
+  },
+  {
     label: "Pricing",
     href: "/pricing",
   },

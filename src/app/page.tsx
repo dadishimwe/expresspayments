@@ -7,6 +7,8 @@ import { Hero } from "@/components/hero/hero";
 import { Quote } from "@/components/quote/quote";
 import { Showcase } from "@/components/showcase/showcase";
 import { Testimonials } from "@/components/testimonials/testimonials";
+import { IndustrySolutions } from "@/components/solutions/industry-solutions";
+import { FloatingCTA } from "@/components/animations/floating-cta";
 import { useRedirectWarning } from "@/lib/redirect";
 
 export default function Home() {
@@ -18,9 +20,11 @@ export default function Home() {
       <Showcase />
       <Quote />
       <Features />
+      <IndustrySolutions />
       <Testimonials />
       <FAQs />
       <Footer />
+      <FloatingCTA />
     </>
   );
 }

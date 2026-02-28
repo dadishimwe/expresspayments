@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import Image from "next/image";
+import { ReactNode } from "react";
 
 interface PremiumTestimonialProps {
   quote: string;
@@ -20,8 +21,8 @@ export function PremiumTestimonial({
   highlightWords = [],
 }: PremiumTestimonialProps) {
   // Highlight specific words in the quote
-  const renderQuote = () => {
-    let parts = [quote];
+  const renderQuote = (): (string | ReactNode)[] => {
+    let parts: (string | ReactNode)[] = [quote];
     
     highlightWords.forEach((word) => {
       parts = parts.flatMap((part) => {

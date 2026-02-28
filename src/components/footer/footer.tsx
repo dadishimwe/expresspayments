@@ -1,15 +1,15 @@
 import { FooterBlur } from "@/components/footer/footer-blur";
-import { XIcon, LinkedInIcon, GithubIcon } from "@/components/footer/icons";
+import { XIcon, LinkedInIcon } from "@/components/footer/icons";
 import Link from "next/link";
 
 const links = [
   {
-    title: "Acme",
+    title: "Express Payments",
     links: [
       {
-        label: "Download App",
-        href: "https://apps.apple.com/",
-        title: "Download the app from the App Store",
+        label: "Home",
+        href: "/",
+        title: "Go to home page",
       },
       {
         label: "Features",
@@ -27,14 +27,19 @@ const links = [
     title: "Products",
     links: [
       {
-        label: "For Android",
-        href: "https://play.google.com/store",
-        title: "Download on Android",
+        label: "Clover Flex",
+        href: "/pricing",
+        title: "Learn about Clover Flex",
       },
       {
-        label: "For iPhone",
-        href: "https://apps.apple.com/",
-        title: "Download on iOS",
+        label: "Clover Mini",
+        href: "/pricing",
+        title: "Learn about Clover Mini",
+      },
+      {
+        label: "Clover Station Duo",
+        href: "/pricing",
+        title: "Learn about Clover Station Duo",
       },
     ],
   },
@@ -81,16 +86,6 @@ const links = [
         href: "https://www.linkedin.com/",
         title: "Connect with us on LinkedIn",
       },
-      {
-        label: (
-          <div className="flex items-center gap-2">
-            <GithubIcon className="h-4 w-4" />
-            <span>Github</span>
-          </div>
-        ),
-        href: "https://github.com/",
-        title: "View our GitHub repository",
-      },
     ],
   },
 ];
@@ -118,6 +113,9 @@ export function Footer() {
             </ul>
           </div>
         ))}
+      </div>
+      <div className="mt-12 text-center text-sm text-muted-foreground">
+        © {new Date().getFullYear()} Express Payments. All rights reserved.
       </div>
     </footer>
   );

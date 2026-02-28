@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Paddle Web Payments Starter",
-  description: "A vercel template for taking web payments for mobile apps with Paddle",
+  title: "Express Payments - Smart POS Solutions with Clover",
+  description: "Get Clover Flex, Mini, and Station Duo with transparent pricing and no long-term contracts. Express Payments offers the best rates for your business.",
 };
 
 export default function RootLayout({

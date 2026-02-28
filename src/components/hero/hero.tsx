@@ -1,7 +1,7 @@
 import { Nav } from "@/components/hero/nav";
 import { BackgroundBlur } from "@/components/ui/background-blur";
 import { Button } from "@/components/ui/button";
-import { Pill, PillAvatar, PillAvatarGroup } from "@/components/ui/pill";
+import { Pill } from "@/components/ui/pill";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,26 +12,39 @@ export function Hero() {
       <Nav />
       <div className="mt-16 flex flex-col items-center gap-6">
         <Pill>
-          <PillAvatarGroup className="hidden sm:flex">
-            <PillAvatar src="/avatars/1.jpg" />
-            <PillAvatar src="/avatars/2.jpg" />
-            <PillAvatar src="/avatars/3.jpg" />
-            <PillAvatar src="/avatars/4.jpg" />
-          </PillAvatarGroup>
-          <p className="text-muted-foreground px-2 text-xs font-medium sm:border-l-1 sm:text-sm">
-            Join <span className="text-foreground">3 Million</span> other users already on board
+          <p className="text-muted-foreground px-2 text-xs font-medium sm:text-sm">
+            Risk-free trial • No contract • Cancel anytime
           </p>
         </Pill>
         <h1 className="text-center text-4xl leading-[1.1] font-medium tracking-tight sm:text-7xl">
-          Meet the App<span className="text-muted-foreground block">That Does It All.</span>
+          Express Payments<span className="text-muted-foreground block">Smart POS Solutions.</span>
         </h1>
         <p className="max-w-lg text-center leading-6 tracking-tight sm:text-xl">
-          Powerful, intuitive, and ready to make your life easier, start using Acme App today.
+          Get the industry-leading Clover devices for your business. 
+          Transparent pricing, no hidden fees, and world-class support.
         </p>
-        <Button className="mb-10 w-fit" size="lg" asChild>
-          <Link href="/pricing">Get Started</Link>
-        </Button>
-        <Image src="/app-image-1.png" alt="Hero" width={304} height={445} />
+        <div className="flex gap-4">
+          <Button className="mb-10 w-fit" size="lg" asChild>
+            <Link href="/pricing">View Pricing</Link>
+          </Button>
+          <Button variant="outline" className="mb-10 w-fit" size="lg" asChild>
+            <Link href="#features">Learn More</Link>
+          </Button>
+        </div>
+        <div className="relative mt-8 flex justify-center gap-4 md:gap-12">
+          <div className="flex flex-col items-center gap-2">
+            <Image src="/products/clover-flex.png" alt="Clover Flex" width={150} height={150} className="object-contain" />
+            <span className="text-sm font-medium">Clover Flex</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Image src="/products/clover-mini.png" alt="Clover Mini" width={200} height={200} className="object-contain" />
+            <span className="text-sm font-medium">Clover Mini</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Image src="/products/clover-station-duo.png" alt="Clover Station Duo" width={250} height={250} className="object-contain" />
+            <span className="text-sm font-medium">Clover Station Duo</span>
+          </div>
+        </div>
       </div>
     </div>
   );

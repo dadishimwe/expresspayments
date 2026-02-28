@@ -3,6 +3,8 @@
 import { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 
+type BlendMode = 'screen' | 'multiply' | 'overlay' | 'lighten' | 'darken' | 'color-dodge' | 'color-burn' | 'hard-light' | 'soft-light' | 'difference' | 'exclusion' | 'hue' | 'saturation' | 'color' | 'luminosity';
+
 interface LightPillarProps {
   topColor?: string;
   bottomColor?: string;
@@ -14,7 +16,7 @@ interface LightPillarProps {
   pillarWidth?: number;
   pillarHeight?: number;
   noiseIntensity?: number;
-  mixBlendMode?: any;
+  mixBlendMode?: BlendMode;
   pillarRotation?: number;
   quality?: 'low' | 'medium' | 'high';
 }
@@ -83,13 +85,13 @@ const LightPillar = ({
     if (isMobile && quality !== 'low') effectiveQuality = 'low';
 
     const qualitySettings = {
-      low: { iterations: 24, waveIterations: 1, pixelRatio: 0.5, precision: 'mediump', stepMultiplier: 1.5 },
-      medium: { iterations: 40, waveIterations: 2, pixelRatio: 0.65, precision: 'mediump', stepMultiplier: 1.2 },
+      low: { iterations: 24, waveIterations: 1, pixelRatio: 0.5, precision: 'mediump' as const, stepMultiplier: 1.5 },
+      medium: { iterations: 40, waveIterations: 2, pixelRatio: 0.65, precision: 'mediump' as const, stepMultiplier: 1.2 },
       high: {
         iterations: 80,
         waveIterations: 4,
         pixelRatio: Math.min(window.devicePixelRatio, 2),
-        precision: 'highp',
+        precision: 'highp' as const,
         stepMultiplier: 1.0
       }
     };
@@ -102,11 +104,11 @@ const LightPillar = ({
         antialias: false,
         alpha: true,
         powerPreference: effectiveQuality === 'high' ? 'high-performance' : 'low-power',
-        precision: settings.precision as any,
+        precision: settings.precision,
         stencil: false,
         depth: false
       });
-    } catch (error) {
+    } catch {
       setWebGLSupported(false);
       return;
     }
@@ -367,7 +369,7 @@ const LightPillar = ({
     <div 
       ref={containerRef} 
       className={`absolute inset-0 w-full h-full pointer-events-none ${className}`} 
-      style={{ mixBlendMode: mixBlendMode as any }} 
+      style={{ mixBlendMode: mixBlendMode as React.CSSProperties['mixBlendMode'] }} 
     />
   );
 };

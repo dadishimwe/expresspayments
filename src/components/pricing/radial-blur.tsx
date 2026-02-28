@@ -19,8 +19,8 @@ export function RadialBlur({ className }: Props) {
       {/* Dynamic Light Pillar */}
       <div className="absolute inset-0 h-full w-full overflow-hidden opacity-30">
         <LightPillar
-          topColor="#0047AB" // Deep Blue matching Express Payments
-          bottomColor="#00AEEF" // Cyan matching Express Payments
+          topColor="#0047AB"
+          bottomColor="#00AEEF"
           intensity={0.6}
           rotationSpeed={0.1}
           glowAmount={0.001}

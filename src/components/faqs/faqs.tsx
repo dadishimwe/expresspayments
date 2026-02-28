@@ -42,40 +42,59 @@ export function FAQs() {
           Asked <span className="text-muted-foreground">Questions</span>
         </h2>
         <p className="max-w-lg text-xs leading-6 tracking-tight sm:text-base">
-          Get answers to commonly asked questions.
+          Everything you need to know about Express Payments and our Clover solutions.
         </p>
         <Button className="w-fit" size="lg" asChild>
           <Link href="/pricing">Get Started</Link>
         </Button>
       </div>
-      <Accordion type="single" collapsible defaultValue="branding" className="grid w-full gap-4">
-        <AccordionItemFAQs value="branding">
-          <AccordionTriggerFAQs>Will my app show your branding anywhere?</AccordionTriggerFAQs>
+      <Accordion type="single" collapsible defaultValue="pricing" className="grid w-full gap-4">
+        <AccordionItemFAQs value="pricing">
+          <AccordionTriggerFAQs>What are your processing rates?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
             <p>
-              Never. Your app will be fully white-labeled with your own name, logo, and design. We stay completely
-              invisible.
+              We offer transparent pricing: Interchange plus $0.03 + 0.02%. There are no hidden fees, and we include a $29.99 monthly service fee.
             </p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>
-        <AccordionItemFAQs value="skills">
-          <AccordionTriggerFAQs>Do I need technical skills to use Acme?</AccordionTriggerFAQs>
+        <AccordionItemFAQs value="contract">
+          <AccordionTriggerFAQs>Do I need a long-term contract?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
             <p>
-              No. We handle all the technical setup for you. You can focus on your business while we handle the rest.
+              No. We offer a risk-free trial with no contract. You can cancel anytime if you're not satisfied with our service.
             </p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>
         <AccordionItemFAQs value="devices">
-          <AccordionTriggerFAQs>Will my app work on all devices?</AccordionTriggerFAQs>
+          <AccordionTriggerFAQs>Why are the Clover Flex and Mini free?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
-            <p>Yes. Our app is designed to work on all devices, including iOS and Android.</p>
+            <p>
+              We believe in making payment processing accessible. Most companies charge $2,250 to $3,250 for these devices. We offer them free to help your business grow.
+            </p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>
-        <AccordionItemFAQs value="notifcations">
-          <AccordionTriggerFAQs>Can I send notifications and updates to users?</AccordionTriggerFAQs>
+        <AccordionItemFAQs value="support">
+          <AccordionTriggerFAQs>What kind of support do you provide?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
-            <p>Yes. You can send notifications and updates to users through our app.</p>
+            <p>
+              We provide world-class customer support to help you succeed. Our team is available to assist with setup, troubleshooting, and any questions you have.
+            </p>
+          </AccordionContentFAQs>
+        </AccordionItemFAQs>
+        <AccordionItemFAQs value="setup">
+          <AccordionTriggerFAQs>How long does setup take?</AccordionTriggerFAQs>
+          <AccordionContentFAQs>
+            <p>
+              Setup is quick and easy. Most merchants are up and running within minutes. Our team can guide you through the entire process.
+            </p>
+          </AccordionContentFAQs>
+        </AccordionItemFAQs>
+        <AccordionItemFAQs value="devices-choice">
+          <AccordionTriggerFAQs>Which device should I choose?</AccordionTriggerFAQs>
+          <AccordionContentFAQs>
+            <p>
+              It depends on your needs. Clover Flex is perfect for mobile and on-the-go payments. Clover Mini is ideal for compact countertops. Clover Station Duo is best for high-volume retail or restaurants.
+            </p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>
       </Accordion>
